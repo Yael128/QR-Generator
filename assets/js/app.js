@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
 import Form from './components/Form';
+import mapCodes from './components/mapCodes';
 
 class App extends React.Component {
     constructor(props) {
@@ -42,7 +43,10 @@ class App extends React.Component {
 
     render() {
         return (
-            <Form addCode={this.addCode}/>
+            <Fragment>
+                <Form addCode={this.addCode}/>
+                <mapCodes codes={this.state.codes}/>
+            </Fragment>
         );
     }
 }
