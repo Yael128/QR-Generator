@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Form from './components/Form';
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -19,7 +21,9 @@ class App extends React.Component {
         }
     }
     render() {
-        return 
+        return (
+            <Form />
+        );
     }
 }
 
