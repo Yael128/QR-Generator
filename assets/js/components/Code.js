@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Grid, Divider } from '@material-ui/core';
 import APIcall from './APIcall';
+import DownloadImg from './DownloadImg';
 
 class Code extends React.Component {
     constructor(props) {
@@ -21,8 +22,9 @@ class Code extends React.Component {
                         <p style={{marginBottom: "10px"}}>Description: <br/>{description}</p>
                     </Grid>
                     <Grid item xs={2}>
-                        {/* Download Button */}
-                    </Grid>                    
+                        <DownloadImg code={this.props.code}/>
+                    </Grid>
+                                        
                 </Grid> 
                 : null}
                 <Divider />
