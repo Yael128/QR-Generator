@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Grid, Divider } from '@material-ui/core';
 import APIcall from './APIcall';
 import DownloadImg from './DownloadImg';
+import PostCode from './PostCode';
 
 class Code extends React.Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class Code extends React.Component {
                     <Grid item xs={2}>
                         <DownloadImg code={this.props.code}/>
                     </Grid>
-                                        
+                    <PostCode postData={this.props.code}/>           
                 </Grid> 
                 : null}
                 <Divider />
