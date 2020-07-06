@@ -18,7 +18,7 @@ class Code extends React.Component {
                     <Grid item xs={2}>
                         <APIcall url={url}/>
                     </Grid>
-                    <Grid item xs={8} style={{padding: "0 15px 0 15px"}}>
+                    <Grid item xs={8} style={{padding: "0 25px 0 35px"}}>
                         <h3>Title: {title}</h3> 
                         <p style={{marginBottom: "10px"}} style={{textAlign: "justify"}} >Description: <br/>{description}</p>
                     </Grid>
