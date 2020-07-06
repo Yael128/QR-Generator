@@ -16,13 +16,15 @@ class Form extends React.Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.createURL = this.createURL.bind(this);
     }
 
     handleChange(e) {
         this.setState({
             [e.target.name]: e.target.value
         })
+        const { data, size, format} = this.state;
+        const encodeData = encodeURI(data);
+        this.setState({url: `http://api.qrserver.com/v1/create-qr-code/?data=${encodeData}&size=${size}x${size}&format=${format}`})
     }
 
     handleSubmit(e) {
@@ -31,18 +33,10 @@ class Form extends React.Component {
             return {id: prevState.id + 1}
         });
         
-        const { id, title, description, size, data, format, submited, url} = this.state;
-
-        this.createURL(size, data, format);
+        const { id, title, description, size, data, format, submited, url} = this.state;        
 
         this.props.addCode(id, title, description, size, data, format, submited, url)
 
-    }
-
-    createURL(size, data, format) {
-        const encodeData = encodeURI(data);
-
-        this.setState({url: `http://api.qrserver.com/v1/create-qr-code/?data=${encodeData}&size=${size}x${size}&format=${format}`})
     }
 
     render() {

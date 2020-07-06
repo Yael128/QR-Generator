@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
 import Form from './components/Form';
-import mapCodes from './components/mapCodes';
+import MapCodes from './components/mapCodes';
 
 class App extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class App extends React.Component {
         this.state = {
             codes: [
                 {
-                    id: 0,
+                    id: null,
                     title: null,
                     description: null,
                     size: null,

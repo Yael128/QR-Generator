@@ -8,9 +8,9 @@ class MapCodes extends React.Component {
     render(){
         return (
             <Fragment>
-                {this.props.codes.map( code => {
+                {this.props.codes.map( code => (
                     <Code key={code.id} code={code}/>
-                })}
+                ))}
             </Fragment>
         );
     }
