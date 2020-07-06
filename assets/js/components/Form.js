@@ -131,7 +131,6 @@ class Form extends React.Component {
                     </Grid>
 
                 </form>
-                <img src={this.state.url}></img>
             </Grid>
         );
     }

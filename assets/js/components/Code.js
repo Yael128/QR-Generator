@@ -5,6 +5,7 @@ class Code extends React.Component {
         super(props);
     }
     render() {
+        console.log(this.props.code.url)
         return
     }
 }

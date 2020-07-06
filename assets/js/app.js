@@ -45,7 +45,7 @@ class App extends React.Component {
         return (
             <Fragment>
                 <Form addCode={this.addCode}/>
-                <mapCodes codes={this.state.codes}/>
+                <MapCodes codes={this.state.codes}/>
             </Fragment>
         );
     }

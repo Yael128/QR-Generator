@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Code from './Code';
 
-class mapCodes extends React.Component {
+class MapCodes extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -9,11 +9,11 @@ class mapCodes extends React.Component {
         return (
             <Fragment>
                 {this.props.codes.map( code => {
-                    <Code code={code}/>
+                    <Code key={code.id} code={code}/>
                 })}
             </Fragment>
         );
     }
 }
 
-export default mapCodes;
+export default MapCodes;
