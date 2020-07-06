@@ -1,19 +1,20 @@
 import React, { Fragment } from 'react';
 import { Grid, Divider } from '@material-ui/core';
+import APIcall from './APIcall';
 
 class Code extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
-        const { id, title, description, submited } = this.props.code;
+        const { id, title, description, submited, url } = this.props.code;
         console.log(submited);
         return (
             <Fragment>
                 {submited ? 
                 <Grid container item xs={12} direction={id%2 === 0 ? "row" : "row-reverse"}>
                     <Grid item xs={3}>
-                        {/*Create component for img*/}
+                        <APIcall url={url}/>
                     </Grid>
                     <Grid item xs={7}>
                         <h3>Title: {title}</h3> 
