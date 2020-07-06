@@ -82,7 +82,7 @@ class Form extends React.Component {
                             type="submit"
                             value="Submit"
                             variant="contained"
-                            
+                            color="primary"
                             >Create</Button>
                         </Grid>
                     </Grid>
