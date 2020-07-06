@@ -13,11 +13,29 @@ class Form extends React.Component {
             format: '',
             submited: false
         }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    handleChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault()
+        this.setState((prevState, props) =>{
+            return {id: prevState.id + 1}
+        });
+        
+        const { id, title, description, size, data, format, submited} = this.state;
+    }
+
     render() {
         return (
             <Grid container>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <Grid item xs={12} container spacing={3} justify="center">
                         <Grid item xs={3}>
                             <label>Title</label><br/>
@@ -26,6 +44,8 @@ class Form extends React.Component {
                             name="title"
                             variant="outlined"
                             size="small"
+                            value={this.state.title}
+                            onChange={this.handleChange}
                             />
                         </Grid>
 
@@ -36,6 +56,8 @@ class Form extends React.Component {
                             name="description"
                             variant="outlined"
                             size="small"
+                            value={this.state.description}
+                            onChange={this.handleChange}
                             />
                         </Grid>
 
@@ -46,6 +68,8 @@ class Form extends React.Component {
                             name="size"
                             variant="outlined"
                             size="small"
+                            value={this.state.size}
+                            onChange={this.handleChange}
                             />
                         </Grid>
 
@@ -55,7 +79,9 @@ class Form extends React.Component {
                             type="text"
                             name="data"
                             variant="outlined"
-                            size="small"        
+                            size="small"
+                            value={this.state.data}    
+                            onChange={this.handleChange}    
                             />
                         </Grid>
                     </Grid>
@@ -66,12 +92,16 @@ class Form extends React.Component {
                             name="format"
                             size="small"
                             value="jpg"
+                            checked={this.state.format === 'jpg'}
+                            onChange={this.handleChange}
                             /><label>JPG</label>
 
                             <Radio
                             name="format"
                             size="small"
                             value="png"
+                            checked={this.state.format === 'png'}
+                            onChange={this.handleChange}
                             /><label>PNG</label>
                         </Grid>
                         {/* making some space*/}
