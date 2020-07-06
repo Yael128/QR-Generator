@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, TextField, Radio, Button } from '@material-ui/core';
+import { Container, Grid, TextField, Radio, Button } from '@material-ui/core';
 
 class Form extends React.Component {
     constructor(props) {
@@ -41,9 +41,9 @@ class Form extends React.Component {
 
     render() {
         return (
-            <Grid container style={{marginLeft: "100px"}}>
+            <Container >
                 <form onSubmit={this.handleSubmit}>
-                    <Grid item xs={12} container spacing={3} justify="center">
+                    <Grid item xs={12} container spacing={3} justify="center" style={{marginLeft: "0"}}>
                         <Grid item xs={3}>
                             <label>Title</label><br/>
                             <TextField
@@ -130,7 +130,7 @@ class Form extends React.Component {
                     </Grid>
 
                 </form>
-            </Grid>
+            </Container>
         );
     }
 }

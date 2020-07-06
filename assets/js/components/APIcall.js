@@ -7,7 +7,10 @@ class APIcall extends React.Component {
 
     render() {
         return (
-            <img id="codeImg" src={this.props.url} width="200px" alt="qr-code-img"></img>
+            <div style={{padding: "10px 0 10px 0"}}>
+                <img id="codeImg" src={this.props.url} width="200px" alt="qr-code-img" style={{borderStyle: "solid"}}></img>
+            </div>
+            
         );
     }
 }
