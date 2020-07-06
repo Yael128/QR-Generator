@@ -44,7 +44,9 @@ class App extends React.Component {
     render() {
         return (
             <Fragment>
+                <h1 style={{textAlign: 'center'}}>QR Generator app</h1>
                 <Form addCode={this.addCode}/>
+                <br/>
                 <MapCodes codes={this.state.codes}/>
             </Fragment>
         );

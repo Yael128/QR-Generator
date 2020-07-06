@@ -41,12 +41,13 @@ class Form extends React.Component {
 
     render() {
         return (
-            <Grid container>
+            <Grid container style={{marginLeft: "100px"}}>
                 <form onSubmit={this.handleSubmit}>
                     <Grid item xs={12} container spacing={3} justify="center">
                         <Grid item xs={3}>
                             <label>Title</label><br/>
                             <TextField
+                            label="eg.200"
                             type="text"
                             name="title"
                             variant="outlined"
@@ -59,6 +60,7 @@ class Form extends React.Component {
                         <Grid item xs={3}>
                             <label>Description</label><br/>
                             <TextField
+                            label="eg.200"
                             type="text"
                             name="description"
                             variant="outlined"
@@ -68,9 +70,10 @@ class Form extends React.Component {
                             />
                         </Grid>
 
-                        <Grid item xs={3}>
+                        <Grid item xs={2}>
                             <label>Size</label><br/>
                             <TextField
+                            label="eg.200"
                             type="text"
                             name="size"
                             variant="outlined"
@@ -83,6 +86,7 @@ class Form extends React.Component {
                         <Grid item xs={3}>
                             <label>QR Content</label>
                             <TextField
+                            label="eg.http://www.abcd.com,etc"
                             type="text"
                             name="data"
                             variant="outlined"
@@ -93,8 +97,9 @@ class Form extends React.Component {
                         </Grid>
                     </Grid>
 
-                    <Grid item xs={12} container spacing={3}>
+                    <Grid item xs={12} container spacing={3} style={{paddingLeft: "30px"}}>
                         <Grid item xs={3}>
+                            <label style={{paddingLeft: "25px"}}>Format</label><br/>
                             <Radio
                             name="format"
                             size="small"
