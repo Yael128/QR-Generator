@@ -13,7 +13,7 @@ This app will generate a QR code with the information provided in the QR Content
 
 Here are the steps to install this app.
 
-- Clone it from GIT url: https://github.com/Yael128/Part1.git
+- Clone it from GIT url: https://github.com/Yael128/QR-Generator.git
 - Open Git Bash
 - Change the current working directory to the location where you want the cloned directory.
 - Type ```git clone -b release/1.0```, and then paste URL.
