@@ -3,10 +3,11 @@ import React from 'react';
 class PostCode extends React.Component {
     constructor(props) {
         super(props);
+        this.postReq = this.postReq.bind(this);
     }
 
     componentDidMount() {
-
+        this.postReq();
     }
 
     postReq() {
@@ -32,6 +33,7 @@ class PostCode extends React.Component {
     }
 
     render() {
+        console.log("From Post")
         return null
     }
 }
